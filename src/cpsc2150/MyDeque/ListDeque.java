@@ -5,4 +5,11 @@ public class ListDeque implements IDeque{
     // myQ.get(0) is the front of the deque
     private List<Double> myQ;
     // complete the class
+    public ListDeque {
+        // Creating a new list
+        List<Double> myQ = new LinkedList();
+        
+    }
+    
+    
 }
