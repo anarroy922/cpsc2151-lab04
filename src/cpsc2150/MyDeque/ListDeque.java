@@ -1,18 +1,23 @@
-package cpsc2150.MyDeque;
-import java.util.*;
 public class ListDeque implements IDeque{
     // this time store the deque in a list
     // myQ.get(0) is the front of the deque
     private List<Double> myQ;
     // complete the class
+    public ListDeque {
+        // Creating a new list
+        List<Double> myQ = new LinkedList();
+
+    }
 
     /** Adds x to the end of the deque
      *
      * @param x     double to be added to the end of the deque
-     * @pre x!= NULL && queue.length() != MAX_LENGTH
+     * @pre x!= NULL && queue.length() != 100
      * @post x is at end of deque
      */
     public void enqueue(Double x) {
+
+        myQ.addLast(x);
 
     }
 
@@ -23,19 +28,23 @@ public class ListDeque implements IDeque{
      * @post enqueue = first double in deque and deque = #deque
      */
     public Double dequeue() {
-        return 0.0;
-    }
 
+        myQ.removeFirst();
+
+        return myQ.getFirst();
+    }
 
     /** Adds x to the front of the deque
      *
      * @param x     double to be added to the front of the deque
-     * @pre x != NULL && queue.length() != MAX_LENGTH
+     * @pre x != NULL && queue.length() != 100
      * @post x is at beginning of deque
      */
     public void inject(Double x) {
 
-    }
+        myQ.addFirst(x);
+
+     }
 
     /**removes and returns the double at the end of the deque
      *
@@ -44,18 +53,22 @@ public class ListDeque implements IDeque{
      * @post inject = last double in deque and deque = #deque
      */
     public Double removeLast() {
-        return 0.0;
+
+        myQ.removeLast();
+
+        return myQ.getLast();
     }
 
     /**returns the number of doubles in the deque
      *
      * @return number of doubles in deque
      * @pre deque != null
-     * @post length = size of deque and deque = #deque
+     * @post length = size of deque and deque = deque
      */
     public int length() {
-        return 0;
-    }
+
+        return myQ.size();
+     }
 
     /**clears the entire deque
      *
@@ -64,5 +77,6 @@ public class ListDeque implements IDeque{
      */
     public void clear() {
 
+      myQ.clear();
     }
 }
